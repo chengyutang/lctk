@@ -32,7 +32,7 @@ linkedList = lctk.binary(arr)
 This process can also be reversed, in case you want to preview the elements in a linked list.
 To print the values of the linked list, use the `printLinkedList` function
 ```python
-arr = lctk.printLinkedList(linkedList)
+arr = lctk.linkedList2Arr(linkedList)
 print(arr)
 ```
 The definition of ListNode:
@@ -44,7 +44,7 @@ class ListNode:
 ```
 
 ### 3.2 Binary Tree
-Similar with linked list, a binary tree is also represented by an array in LeetCode's console, and the order is a layer-wise, left-to-right travesal of the tree.
+Similar with linked list, a binary tree is also represented by an array in LeetCode's console, and the order is basically a BFS travesal of the tree.
 
 Given an input array `arr` that represents a binary tree, the following command
 ```python

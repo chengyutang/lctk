@@ -24,7 +24,7 @@ def linkedList(arr):
 		cur = cur.next
 	return dummy.next
 
-def printLinkedList(head):
+def linkedList2Arr(head):
 	res = []
 	cur = head
 	while cur:
@@ -52,6 +52,20 @@ def binaryTree(arr):
 					queue.append(cur.right)
 				i += 1
 	return root
+
+def binaryTree2Arr(root):
+	res = []
+	queue = [root]
+	while queue:
+		cur = queue.pop(0)
+		val = cur.val if cur else None
+		res.append(val)
+		if cur:
+			queue.append(cur.left)
+			queue.append(cur.right)
+	while res and not res[-1]:
+		res.pop()
+	return res
 
 def graph(inDict):
 	if not inDict:
