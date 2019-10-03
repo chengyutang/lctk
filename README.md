@@ -1,7 +1,7 @@
 # lctk
 GitHub page: https://github.com/chengyutang/lctk
 
-LCTK is tool for creating LeetCode test cases for the ease of local testing.
+**lctk** is tool for creating LeetCode test cases for the ease of local testing.
 
 ## 1. Introduction
 [LeetCode](https://leetcode.com) is a website where people can improve their coding skills and get prepared for techical interviews by solving coding problems and discussing with other people. Users can use the online judge (OJ) to run and test their codes within the brower. But the OJ could sometimes be slow, due to network limit or server overflow, which is not very convenient and efficient, especially when submitting frequently. Therefore, some users prefer to write and test their codes locally for a more convenient test (and a better looking submission history :p).
@@ -22,6 +22,7 @@ First import this package simply using
 ```python
 import lctk
 ```
+
 ### 3.1 Linked List
 Linked list is represented by array in LeetCode's console. To create the equivalent linked list from an array, use
 ```python
@@ -32,7 +33,7 @@ linkedList = lctk.binary(arr)
 This process can also be reversed, in case you want to preview the elements in a linked list.
 To print the values of the linked list, use the `printLinkedList` function
 ```python
-arr = lctk.linkedList2Arr(linkedList)
+arr = lctk.printLinkedList(linkedList)
 print(arr)
 ```
 The definition of ListNode:
@@ -44,15 +45,27 @@ class ListNode:
 ```
 
 ### 3.2 Binary Tree
-Similar with linked list, a binary tree is also represented by an array in LeetCode's console, and the order is basically a BFS travesal of the tree.
+Similar with linked list, a binary tree is also represented by an array in LeetCode's console, and the order is a layer-wise, left-to-right travesal of the tree.
 
 Given an input array `arr` that represents a binary tree, the following command
 ```python
 root = lctk.binaryTree(arr)
  ```
- where `root	` would be the root node (a `TreeNode` object) of the equivalent binary tree.
- 
- The definition of TreeNode:
+where `root	` would be the root node (a `TreeNode` object) of the equivalent binary tree.
+
+You can also do the opposite, getting the array representation of a binary tree given a TreeNode `root` using
+```python
+arr = lctk.binaryTree2Arr(root)
+```
+Example:
+```python
+>>> inArr = [1, 2, 3, 4, None, 5, None, 6, None, None, None, 7
+>>> root = lctk.binaryTree(inArr)
+>>> outArr = lctk.binaryTree2Arr(root)
+>>> inArr == outArr
+True
+```
+The definition of TreeNode:
 ```python
 class TreeNode:
 	def __init__(self, x):
@@ -63,7 +76,6 @@ class TreeNode:
 
 ### 3.3 Graph (Directed and Undirected)
 In LeetCode, a graph is typically represented by a dictionary, just like that in [Leetcode #133: Clone Graph](https://leetcode.com/problems/clone-graph/).
-
 ```python
 root = lctk.graph(inDict)
 ```
@@ -89,4 +101,4 @@ class GraphNode:
 		self.val = x
 		self.neighbors = []
 ```
-Happy LeetCoding!
+Happy LeetCoding !
