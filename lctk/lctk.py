@@ -17,8 +17,6 @@ class GraphNode:
 		self.val = x
 		self.neighbors = []
 
-# class :
-
 def linkedList(arr):
 	cur = dummy = ListNode(0)
 	for x in arr:
