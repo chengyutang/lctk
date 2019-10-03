@@ -101,4 +101,7 @@ class GraphNode:
 		self.val = x
 		self.neighbors = []
 ```
-Happy LeetCoding !
+## 4. Conclusion
+If there were any error or suggestions, please let me know through the GitHub repository page shown above.
+
+Happy LeetCoding!
