@@ -17,20 +17,57 @@ class GraphNode:
 		self.val = x
 		self.neighbors = []
 
-def linkedList(arr):
+def linkedList(arr, cyclePos = -1):
 	cur = dummy = ListNode(0)
 	for x in arr:
 		cur.next = ListNode(x)
 		cur = cur.next
+	if cyclePos >= 0:
+		if cyclePos >= len(arr):
+			print("Error: invalid position of the start of cycle.")
+			return None
+		tail = cur
+		cur = dummy.next
+		for i in range(cyclePos):
+			cur = cur.next
+		tail.next = cur
 	return dummy.next
 
 def linkedList2Arr(head):
-	res = []
-	cur = head
-	while cur:
-		res.append(cur.val)
-		cur = cur.next
-	return res
+	hasCycle, slow = _hasCycle(head)
+	if hasCycle:
+		i = 0
+		temp = head
+		while slow != temp:
+			slow = slow.next
+			temp = temp.next
+			i += 1
+		res = []
+		cur = head
+		posSeen = False
+		while not (cur == temp and posSeen):
+			if cur == temp:
+				posSeen = True
+			res.append(cur.val)
+			cur = cur.next
+		print("There exists a cycle, starting at the postion %d (0-indexed)."%(i))
+		return res
+	else:
+		res = []
+		cur = head
+		while cur:
+			res.append(cur.val)
+			cur = cur.next
+		return res
+
+def _hasCycle(head):
+	fast = slow = head
+	while fast and fast.next:
+		fast = fast.next.next
+		slow = slow.next
+		if fast == slow:
+			return True, slow
+	return False, None
 
 def binaryTree(arr):
 	if not arr:
@@ -100,3 +137,7 @@ def _graph2DictDFS(root, registry):
 	for neighbor in root.neighbors:
 		neighborList.append(_graph2DictDFS(neighbor, registry))
 	return {"$id": str(idx), "neighbors": neighborList, "val": root.val}
+
+a = [1, 2,3 ,4 , 5]
+head = linkedList(a, 2)
+print(linkedList2Arr(head))
