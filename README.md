@@ -117,3 +117,4 @@ Happy LeetCoding!
 ## Version History
 0.0.1: Initial version.
 0.0.2: Added supported for linked list with cycle.
+0.0.3: Fixed bugs.

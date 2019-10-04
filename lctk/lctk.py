@@ -137,7 +137,3 @@ def _graph2DictDFS(root, registry):
 	for neighbor in root.neighbors:
 		neighborList.append(_graph2DictDFS(neighbor, registry))
 	return {"$id": str(idx), "neighbors": neighborList, "val": root.val}
-
-a = [1, 2,3 ,4 , 5]
-head = linkedList(a, 2)
-print(linkedList2Arr(head))
