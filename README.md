@@ -1,14 +1,14 @@
-# lctk
+# LeetCode Toolkit (lctk)
 GitHub page: https://github.com/chengyutang/lctk
 
-**lctk** is tool for creating LeetCode test cases for the ease of local testing.
+**lctk** is Python 3 library for creating LeetCode test cases with customized data structures for the ease of local testing.
 
 ## 1. Introduction
 [LeetCode](https://leetcode.com) is a website where people can improve their coding skills and get prepared for techical interviews by solving coding problems and discussing with other people. Users can use the online judge (OJ) to run and test their codes within the brower. But the OJ could sometimes be slow, due to network limit or server overflow, which is not very convenient and efficient, especially when submitting frequently. Therefore, some users prefer to write and test their codes locally for a more convenient test (and a better looking submission history :p).
 
-But for some of the problems, where the inputs are customised data structures, such as linked list, binary tree and graph, it's difficult to come up with test cases locally, while LeetCode uses built-in data structures to represent them, which makes it much easier to create test cases. For example, linked lists and binary trees are represented by arrays, and graphs are represented by dictionaries. 
+But for some of the problems, where the inputs are customised data structures, such as linked list, binary tree and graph, it could be difficult to come up with test cases locally, while LeetCode alternatively uses built-in data structures to represent them, which makes it much easier to create test cases. For example, linked lists and binary trees are represented by arrays, and graphs are represented by dictionaries. 
 
-This tool helps users with creating linked list, binary tree, and graph locally from array or dictionary, for the ease of local testing.
+This tool helps users conveniently generate linked lists, binary trees, and graphs from arrays or dictionaries, for the ease of local testing.
  
 ## 2. Install
 If pip is installed, type the following command in the terminal to install this package
@@ -18,7 +18,7 @@ pip install lctk
 To install pip, refer [here](https://pip.pypa.io/en/stable/installing/).
 
 ## 3. Usage
-First import this package simply using
+First import this library simply using
 ```python
 import lctk
 ```
@@ -105,3 +105,6 @@ class GraphNode:
 If there were any error or suggestions, please let me know through the GitHub repository page shown above.
 
 Happy LeetCoding!
+
+## Version History
+0.0.1: Initial version
