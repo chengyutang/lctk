@@ -1,5 +1,5 @@
 
-# lctk
+# LeetCode (lctk)
 GitHub page: https://github.com/chengyutang/lctk
 
 **lctk** is tool for creating LeetCode test cases for the ease of local testing.
