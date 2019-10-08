@@ -39,7 +39,7 @@ Additionally, if you want to construct a linked list that has a cycle, just simp
 ```python
 head = lctk.binary(arr, 2)
 ```
-If you want to print the values of the linked list, use the `linkedList2Arr` function, which also works with linked list that has a cycle.
+To print the values in a linked list, use the `linkedList2Arr` function, which also works with linked list that has a cycle.
 ```python
 arr = lctk.linkedList2Arr(linkedList)
 print(arr)
