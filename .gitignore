@@ -1,3 +1,5 @@
 dist/
 build/
 lctk.egg-info/
+lctk/__pycache__/
+.DS_Store
