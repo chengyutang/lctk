@@ -11,7 +11,7 @@ But for some of the problems, where the inputs are customised data structures, s
 
 This tool helps users with creating linked list, binary tree, and graph locally from array or dictionary, for the ease of local testing.
  
-## 2. Install
+## 2. Installation
 If pip is installed, type the following command in the terminal to install this package
 ```sh
 pip install lctk
