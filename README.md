@@ -27,17 +27,17 @@ import lctk
 ### 3.1 Linked List
 **API:**
 ```python
-lctk.binary(arr, cyclePos = -1)
+lctk.linkedList(arr, cyclePos = -1)
 ```
 Linked list is represented by array in LeetCode's console. To create the equivalent linked list from an array, use the following command
 ```python
-head = lctk.binary(arr)
+head = lctk.linkedList(arr)
 ```
 `head` would be the head node (a `ListNode` object) of the linked list represented by the input array `arr`.
 
 Additionally, if you want to construct a linked list that has a cycle, just simply specify the position that the cycle begins (0-indexed). For example:
 ```python
-head = lctk.binary(arr, 2)
+head = lctk.linkedList(arr, 2)
 ```
 To print the values in a linked list, use the `linkedList2Arr` function, which also works with linked list that has a cycle.
 ```python
