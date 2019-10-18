@@ -120,3 +120,5 @@ Happy LeetCoding!
 0.0.2: Added supported for linked list with cycle.
 
 0.0.3: Fixed bugs.
+
+0.0.4: Corrected the wrong usage description of linkedList API.

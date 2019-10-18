@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
 	name = 'lctk',
-	version = '0.0.3',
+	version = '0.0.4',
 	author = 'Chengyu Tang',
 	author_email = 'chyutang@gmail.com',
 	description = 'A tool to create linked list, binary tree and graph from array or dictionary for the ease of local test',
