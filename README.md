@@ -4,13 +4,15 @@ GitHub page: https://github.com/chengyutang/lctk
 
 **lctk** is tool for creating LeetCode test cases for the ease of local testing.
 
+**Note:** support for tree nodes with value 0 is fixed in version 0.0.5.
+
 ## 1. Introduction
 [LeetCode](https://leetcode.com) is a website where people can improve their coding skills and get prepared for techical interviews by solving coding problems and discussing with other people. Users can use the online judge (OJ) to run and test their codes within the brower. But the OJ could sometimes be slow, due to network limit or server overflow, which is not very convenient and efficient, especially when submitting frequently. Therefore, some users prefer to write and test their codes locally for a more convenient test (and a better looking submission history :p).
 
 But for some of the problems, where the inputs are customised data structures, such as linked list, binary tree and graph, it's difficult to come up with test cases locally, while LeetCode uses built-in data structures to represent them, which makes it much easier to create test cases. For example, linked lists and binary trees are represented by arrays, and graphs are represented by dictionaries. 
 
 This tool helps users with creating linked list, binary tree, and graph locally from array or dictionary, for the ease of local testing.
- 
+
 ## 2. Installation
 If pip is installed, type the following command in the terminal to install this package
 ```sh
@@ -58,7 +60,7 @@ Similar with linked list, a binary tree is also represented by an array in LeetC
 Given an input array `arr` that represents a binary tree, the following command
 ```python
 root = lctk.binaryTree(arr)
- ```
+```
 where `root	` would be the root node (a `TreeNode` object) of the equivalent binary tree.
 
 You can also do the opposite, getting the array representation of a binary tree given a TreeNode `root` using
