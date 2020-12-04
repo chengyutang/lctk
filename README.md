@@ -124,3 +124,7 @@ Happy LeetCoding!
 0.0.3: Fixed bugs.
 
 0.0.4: Corrected the wrong usage description of linkedList API.
+
+0.0.5: Fixed an error handling treeNode with value 0 (@ew-git).
+
+0.0.6: Fixed a typo (@roachsinai).
