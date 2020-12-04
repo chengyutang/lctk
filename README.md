@@ -69,7 +69,7 @@ arr = lctk.binaryTree2Arr(root)
 ```
 Example:
 ```python
->>> inArr = [1, 2, 3, 4, None, 5, None, 6, None, None, None, 7
+>>> inArr = [1, 2, 3, 4, None, 5, None, 6, None, None, None, 7]
 >>> root = lctk.binaryTree(inArr)
 >>> outArr = lctk.binaryTree2Arr(root)
 >>> inArr == outArr
